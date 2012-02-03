@@ -2,7 +2,7 @@
 %define		libname	%mklibname %{name}core %{major}
 
 Name:		kwooty
-Version:	0.8.0
+Version:	0.8.1
 Release:	1
 Summary:	A friendly NZB Usenet binary downloader
 License:	GPLv2+
@@ -57,7 +57,6 @@ chmod -x README.txt
 
 
 %install
-rm -rf %{buildroot}
 # The makefile assumes we are in the build directory
 cd build
 %makeinstall_std

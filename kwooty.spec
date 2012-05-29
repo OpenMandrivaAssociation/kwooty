@@ -2,7 +2,7 @@
 %define		libname	%mklibname %{name}core %{major}
 
 Name:		kwooty
-Version:	0.8.1
+Version:	0.8.3
 Release:	1
 Summary:	A friendly NZB Usenet binary downloader
 License:	GPLv2+
@@ -13,8 +13,6 @@ BuildRequires:	cmake >= 2.6.0
 BuildRequires:	kdebase4-workspace-devel >= 4.6.0
 BuildRequires:	kdelibs4-devel >= 4.6.0
 BuildRequires:	gettext
-#BuildRequires:	msgfmt
-BuildRequires:	desktop-file-utils
 Requires:	parchive2
 Requires:	unrar
 Requires:	%{libname} = %{version}
@@ -31,14 +29,12 @@ A friendly NZB newsgroup binary grabber. Its main features are:
 - SSL connection support
 - Pause/Resume downloads.
 
-
 %package -n %{libname}
-Summary:		Librery for Kwoot usenet binary grabber
+Summary:	Librery for Kwoot usenet binary grabber
 Group:		System/Libraries
 
 %description -n %{libname}
 Main library for Kwooty.
-
 
 %prep
 %setup -q
@@ -50,27 +46,16 @@ rmdir build
 chmod -x COPYING
 chmod -x README.txt
 
-
 %build
-%cmake
+%cmake_kde4
 %make
 
-
 %install
-# The makefile assumes we are in the build directory
-cd build
-%makeinstall_std
-
-# Remove an unwanted category
-desktop-file-install  \
-		    --remove-category=Internet \
-		    --dir %{buildroot}%{_kde_datadir}/applications/kde4 ../src/%{name}.desktop
-
+%makeinstall_std -C build
 
 %find_lang %{name}
 
-
-%files -f build/%{name}.lang
+%files -f %{name}.lang
 %doc COPYING README.txt TODO
 %{_kde_appsdir}/%{name}/*
 %{_kde_bindir}/%{name}

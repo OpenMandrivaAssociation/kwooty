@@ -2,13 +2,13 @@
 %define		libname	%mklibname %{name}core %{major}
 
 Name:		kwooty
-Version:	0.8.3
+Version:	0.8.4
 Release:	1
 Summary:	A friendly NZB Usenet binary downloader
 License:	GPLv2+
 Group:		Networking/News
 URL:		http://kwooty.sourceforge.net/
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/project/kwooty/%{name}-%{version}.tar.gz
 BuildRequires:	cmake >= 2.6.0
 BuildRequires:	kdebase4-workspace-devel >= 4.6.0
 BuildRequires:	kdelibs4-devel >= 4.6.0

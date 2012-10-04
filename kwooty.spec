@@ -2,7 +2,7 @@
 %define		libname	%mklibname %{name}core %{major}
 
 Name:		kwooty
-Version:	0.8.4
+Version:	0.9.1
 Release:	1
 Summary:	A friendly NZB Usenet binary downloader
 License:	GPLv2+

@@ -1,7 +1,7 @@
 Summary:	A friendly NZB Usenet binary downloader
 Name:		kwooty
 Version:	1.0.1
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Networking/News
 Url:		http://kwooty.sourceforge.net/

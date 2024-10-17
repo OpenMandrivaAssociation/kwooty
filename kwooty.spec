@@ -4,7 +4,7 @@ Version:	1.0.1
 Release:	3
 License:	GPLv2+
 Group:		Networking/News
-Url:		http://kwooty.sourceforge.net/
+Url:		https://kwooty.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/kwooty/%{name}-%{version}.tar.gz
 BuildRequires:	cmake >= 2.6.0
 BuildRequires:	kdebase4-workspace-devel >= 4.6.0
